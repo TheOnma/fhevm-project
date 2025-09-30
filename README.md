@@ -183,6 +183,25 @@ npm run dev:mock
 ```
 
 ### Production Deployment
+
+#### Vercel Deployment (Recommended)
+1. **Connect to Vercel:**
+   - Go to [vercel.com](https://vercel.com)
+   - Import your GitHub repository
+   - Set **Root Directory** to `packages/site`
+   - Vercel will automatically detect Next.js
+
+2. **Deploy Settings:**
+   - **Framework Preset:** Next.js
+   - **Root Directory:** `packages/site`
+   - **Build Command:** `npm run build`
+   - **Output Directory:** `.next`
+
+3. **Deploy:**
+   - Click "Deploy" and Vercel will build and deploy
+   - The demo page will show (no blockchain node required)
+
+#### Other Platforms
 1. Deploy contracts to your target network
 2. Update contract addresses in `packages/site/abi/`
 3. Build and deploy the frontend

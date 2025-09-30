@@ -1,8 +1,0 @@
-{
-  "version": 2,
-  "buildCommand": "cd packages/site && npm run build",
-  "outputDirectory": "packages/site/.next",
-  "installCommand": "npm install",
-  "framework": "nextjs",
-  "rootDirectory": "packages/site"
-}
