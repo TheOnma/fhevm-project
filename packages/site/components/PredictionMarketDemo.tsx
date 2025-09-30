@@ -56,7 +56,7 @@ export function PredictionMarketDemo() {
               className="mx-auto mb-4"
             />
             <h2 className="text-3xl font-bold text-white mb-2">Secret Market</h2>
-            <p className="text-gray-300">Private Prediction Markets</p>
+            <p className="text-gray-300">Bet in Secret. Win in Public</p>
           </div>
           <button
             className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors"
@@ -82,7 +82,7 @@ export function PredictionMarketDemo() {
               className="mx-auto mb-4"
             />
             <h2 className="text-3xl font-bold text-white mb-4">Secret Market</h2>
-            <p className="text-gray-300 mb-6">Private Prediction Markets</p>
+            <p className="text-gray-300 mb-6">Bet in Secret. Win in Public</p>
           </div>
           
           <div className="bg-blue-900/20 border border-blue-500/30 rounded-lg p-6 mb-6">
@@ -140,7 +140,7 @@ export function PredictionMarketDemo() {
               <h1 className="text-2xl font-bold text-white">Secret Market</h1>
             </div>
             <div className="flex items-center space-x-4">
-              <span className="text-gray-300 text-sm">Private Prediction Markets</span>
+              <span className="text-gray-300 text-sm">Bet in Secret. Win in Public</span>
               {isConnected && accounts && accounts[0] ? (
                 <div className="flex items-center space-x-2">
                   <div className="w-2 h-2 bg-green-500 rounded-full"></div>
@@ -187,7 +187,7 @@ export function PredictionMarketDemo() {
                   <h2 className="text-xl font-semibold text-white">
                     Will BTC close above $100k this year?
                   </h2>
-                  <p className="text-gray-300 text-sm">Private Prediction Market</p>
+                  <p className="text-gray-300 text-sm">Bet in Secret. Win in Public</p>
                 </div>
               </div>
               <div className="text-right">
@@ -222,7 +222,7 @@ export function PredictionMarketDemo() {
                   <h2 className="text-xl font-semibold text-white">
                     What price will Ethereum hit September 29-October 5?
                   </h2>
-                  <p className="text-gray-300 text-sm">Private Prediction Market</p>
+                  <p className="text-gray-300 text-sm">Bet in Secret. Win in Public</p>
                 </div>
               </div>
               <div className="text-right">

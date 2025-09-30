@@ -1,6 +1,6 @@
-# 🔮 Secret Market - Private Prediction Markets
+# 🔮 Secret Market - Bet in Secret. Win in Public
 
-A fully homomorphic encryption (FHE) powered prediction market platform that enables private betting on cryptocurrency price movements. Built with FHEVM technology, users can place encrypted bets without revealing their positions to other participants.
+A fully homomorphic encryption (FHE) powered prediction market platform that enables private betting on cryptocurrency price movements. Built with FHEVM technology, users can place encrypted bets without revealing their positions to other participants - bet in secret, win in public.
 
 ![Secret Market](https://img.shields.io/badge/Status-Live-brightgreen)
 ![FHEVM](https://img.shields.io/badge/Powered%20by-FHEVM-blue)
