@@ -10,6 +10,7 @@
   },
   "scripts": {
     "clean": "rimraf .next && npm run generate-abi",
+    "dev": "next dev --turbopack",
     "dev:mock": "npm run is-hardhat-node-running && next dev --turbopack",
     "dev:mock:rebuild": "npm run is-hardhat-node-running && npm run clean && next dev --turbopack",
     "dev-webpack:mock": "npm run is-hardhat-node-running && next dev",
@@ -17,6 +18,7 @@
     "is-hardhat-node-running": "npm --prefix ../.. run is-hardhat-node-running",
     "generate-abi": "npm --prefix ../.. run generate-abi",
     "build": "next build",
+    "build:production": "next build",
     "start": "next start",
     "lint": "next lint"
   },

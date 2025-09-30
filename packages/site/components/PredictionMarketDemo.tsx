@@ -72,9 +72,52 @@ export function PredictionMarketDemo() {
   if (!market.contractAddress) {
     return (
       <div className="min-h-screen bg-black flex items-center justify-center">
-        <div className="bg-gray-900 rounded-lg p-8 text-center">
-          <h2 className="text-2xl font-bold text-white mb-4">Market Not Available</h2>
-          <p className="text-gray-300">PredictionMarket not deployed on this chain.</p>
+        <div className="bg-gray-900 rounded-lg p-8 text-center max-w-2xl mx-auto">
+          <div className="mb-6">
+            <Image 
+              src="/icon.png" 
+              alt="Secret Market Icon" 
+              width={64} 
+              height={64} 
+              className="mx-auto mb-4"
+            />
+            <h2 className="text-3xl font-bold text-white mb-4">Secret Market</h2>
+            <p className="text-gray-300 mb-6">Private Prediction Markets</p>
+          </div>
+          
+          <div className="bg-blue-900/20 border border-blue-500/30 rounded-lg p-6 mb-6">
+            <h3 className="text-xl font-semibold text-white mb-3">🚀 Production Deployment</h3>
+            <p className="text-blue-200 mb-4">
+              This is a demo of Secret Market - a private prediction market platform powered by FHEVM technology.
+            </p>
+            <div className="text-left space-y-2 text-sm text-gray-300">
+              <p>✅ <strong>Encrypted Betting:</strong> All bet amounts are encrypted using FHEVM</p>
+              <p>✅ <strong>Private Positions:</strong> Your betting strategy remains completely private</p>
+              <p>✅ <strong>Multi-Market Support:</strong> Bitcoin and Ethereum predictions</p>
+              <p>✅ <strong>Professional UI:</strong> Dark theme inspired by Polymarket</p>
+            </div>
+          </div>
+
+          <div className="bg-gray-800 rounded-lg p-4">
+            <h4 className="text-lg font-semibold text-white mb-2">To Run Locally:</h4>
+            <div className="text-left text-sm text-gray-300 space-y-1">
+              <p>1. Clone the repository</p>
+              <p>2. Run <code className="bg-gray-700 px-2 py-1 rounded">npm run hardhat-node</code></p>
+              <p>3. Run <code className="bg-gray-700 px-2 py-1 rounded">npm run dev:mock</code></p>
+              <p>4. Connect MetaMask to localhost:8545</p>
+            </div>
+          </div>
+
+          <div className="mt-6">
+            <a 
+              href="https://github.com/TheOnma/fhevm-project" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="inline-flex items-center px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-colors"
+            >
+              View on GitHub
+            </a>
+          </div>
         </div>
       </div>
     );

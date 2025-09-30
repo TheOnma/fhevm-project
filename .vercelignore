@@ -1,0 +1,7 @@
+node_modules
+packages/fhevm-hardhat-template
+packages/postdeploy
+scripts
+.git
+.env
+*.log
