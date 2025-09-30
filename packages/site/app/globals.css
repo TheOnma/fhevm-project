@@ -2,6 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Dark black theme base */
+html {
+  background-color: #000000; /* black */
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+body {
+  background-color: #000000; /* black */
+  color: #f9fafb; /* gray-50 */
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
 .zama-bg {
   background-color: #ffd200;
 }

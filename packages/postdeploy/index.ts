@@ -37,8 +37,9 @@ function readDeployment(
   deploymentsDir: string
 ): DeploymentInfo {
   const chainDeploymentDir = path.join(deploymentsDir, chainName);
+  const contractFile = path.join(chainDeploymentDir, `${contractName}.json`);
 
-  if (!fs.existsSync(chainDeploymentDir)) {
+  if (!fs.existsSync(chainDeploymentDir) || !fs.existsSync(contractFile)) {
     return {
       abiJson: undefined,
       address: "0x0000000000000000000000000000000000000000",
@@ -47,10 +48,7 @@ function readDeployment(
     };
   }
 
-  const jsonString = fs.readFileSync(
-    path.join(chainDeploymentDir, `${contractName}.json`),
-    "utf-8"
-  );
+  const jsonString = fs.readFileSync(contractFile, "utf-8");
 
   const obj = JSON.parse(jsonString);
 
@@ -161,12 +159,15 @@ export function postDeploy(chainName: string, contractName: string) {
       ? localhostDeployment.abiJson
       : sepoliaDeployment.abiJson;
 
+  // If no reference ABI, use localhost as fallback
+  const finalReferenceABIJson = referenceABIJson || localhostDeployment.abiJson;
+
   // Reset if ABI differs from reference ABI
-  sepoliaDeployment = resetIfNeeded(sepoliaDeployment, referenceABIJson);
-  localhostDeployment = resetIfNeeded(localhostDeployment, referenceABIJson);
+  sepoliaDeployment = resetIfNeeded(sepoliaDeployment, finalReferenceABIJson);
+  localhostDeployment = resetIfNeeded(localhostDeployment, finalReferenceABIJson);
 
   saveDeployments(
-    referenceABIJson,
+    finalReferenceABIJson,
     contractName,
     path.resolve("../site/abi"),
     sepoliaDeployment,
